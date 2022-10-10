@@ -9,6 +9,8 @@ digraph "DNS Security Mechanisms" {
   subgraph cluster_prednssec {
     node [fillcolor="yellow",style="filled,rounded",shape="box"];
     RFC2065 [URL="https://datatracker.ietf.org/doc/html/rfc2065"][tooltip="RFC2065: Domain Name System Security Extensions"][fillcolor="#f0f0f0",color="#c0c0c0"];
+    RFC2137 [URL="https://datatracker.ietf.org/doc/html/rfc2137"][tooltip="RFC2137: Secure Domain Name System Dynamic Update"][color="#c0c0c0",fillcolor="#f0f0f0"];
+    RFC2230 [URL="https://datatracker.ietf.org/doc/html/rfc2230"][tooltip="RFC2230: Key Exchange Delegation Record for the DNS"][style="filled"];
     RFC2535 [URL="https://datatracker.ietf.org/doc/html/rfc2535"][tooltip="RFC2535: Domain Name System Security Extensions"][fillcolor="#f0f0f0",color="#c0c0c0"];
     RFC2536 [URL="https://datatracker.ietf.org/doc/html/rfc2536"][tooltip="RFC2536: DSA KEYs and SIGs in the Domain Name System (DNS)"];
     RFC2537 [URL="https://datatracker.ietf.org/doc/html/rfc2537"][tooltip="RFC2537: RSA/MD5 KEYs and SIGs in the Domain Name System (DNS)"][fillcolor="#f0f0f0",color="#c0c0c0"];
@@ -23,6 +25,8 @@ digraph "DNS Security Mechanisms" {
     RFC3008 [URL="https://datatracker.ietf.org/doc/html/rfc3008"][tooltip="RFC3008: Domain Name System Security (DNSSEC) Signing Authority"][fillcolor="#f0f0f0",color="#c0c0c0"];
     RFC3090 [URL="https://datatracker.ietf.org/doc/html/rfc3090"][tooltip="RFC3090: DNS Security Extension Clarification on Zone Status"][color="#c0c0c0",fillcolor="#f0f0f0"];
     RFC3110 [URL="https://datatracker.ietf.org/doc/html/rfc3110"][tooltip="RFC3110: RSA/SHA-1 SIGs and RSA KEYs in the Domain Name System (DNS)"];
+    RFC3130 [URL="https://datatracker.ietf.org/doc/html/rfc3130"][tooltip="RFC3130: Notes from the State-Of-The-Technology: DNSSEC"][style="filled"];
+    RFC3225 [URL="https://datatracker.ietf.org/doc/html/rfc3225"][tooltip="RFC3225: Indicating Resolver Support of DNSSEC"];
     RFC3226 [URL="https://datatracker.ietf.org/doc/html/rfc3226"][tooltip="RFC3226: DNSSEC and IPv6 A6 aware server/resolver message size requirements"];
     RFC3445 [URL="https://datatracker.ietf.org/doc/html/rfc3445"][tooltip="RFC3445: Limiting the Scope of the KEY Resource Record (RR)"][color="#c0c0c0",fillcolor="#f0f0f0"];
     RFC3645 [URL="https://datatracker.ietf.org/doc/html/rfc3645"][tooltip="RFC3645: Generic Security Service Algorithm for Secret Key Transaction Authentication for DNS (GSS-TSIG)"];
@@ -31,7 +35,7 @@ digraph "DNS Security Mechanisms" {
     RFC3755 [URL="https://datatracker.ietf.org/doc/html/rfc3755"][tooltip="RFC3755: Legacy Resolver Compatibility for Delegation Signer (DS)"][color="#c0c0c0",fillcolor="#f0f0f0"];
     RFC3757 [URL="https://datatracker.ietf.org/doc/html/rfc3757"][tooltip="RFC3757: Domain Name System KEY (DNSKEY) Resource Record (RR) Secure Entry Point (SEP) Flag"][fillcolor="#f0f0f0",color="#c0c0c0"];
     RFC3845 [URL="https://datatracker.ietf.org/doc/html/rfc3845"][tooltip="RFC3845: DNS Security (DNSSEC) NextSECure (NSEC) RDATA Format"][fillcolor="#f0f0f0",color="#c0c0c0"];
-    label = "\"Early\" DNSSEC";
+    label = "Early \"DNSSEC\"";
     color=blue;
   }
   subgraph cluster_dnssec {
@@ -56,6 +60,7 @@ digraph "DNS Security Mechanisms" {
     RFC5910 [URL="https://datatracker.ietf.org/doc/html/rfc5910"][tooltip="RFC5910: Domain Name System (DNS) Security Extensions Mapping for the Extensible Provisioning Protocol (EPP)"];
     RFC5933 [URL="https://datatracker.ietf.org/doc/html/rfc5933"][tooltip="RFC5933: Use of GOST Signature Algorithms in DNSKEY and RRSIG Resource Records for DNSSEC"];
     RFC6014 [URL="https://datatracker.ietf.org/doc/html/rfc6014"][tooltip="RFC6014: Cryptographic Algorithm Identifier Allocation for DNSSEC"];
+    RFC6594 [URL="https://datatracker.ietf.org/doc/html/rfc6594"][tooltip="RFC6594: Use of the SHA-256 Algorithm with RSA, Digital Signature Algorithm (DSA), and Elliptic Curve DSA (ECDSA) in SSHFP Resource Records"];
     RFC6605 [URL="https://datatracker.ietf.org/doc/html/rfc6605"][tooltip="RFC6605: Elliptic Curve Digital Signature Algorithm (DSA) for DNSSEC"];
     RFC6725 [URL="https://datatracker.ietf.org/doc/html/rfc6725"][tooltip="RFC6725: DNS Security (DNSSEC) DNSKEY Algorithm IANA Registry Updates"];
     RFC6781 [URL="https://datatracker.ietf.org/doc/html/rfc6781"][tooltip="RFC6781: DNSSEC Operational Practices, Version 2"][style="filled"];
@@ -67,7 +72,9 @@ digraph "DNS Security Mechanisms" {
     RFC7344 [URL="https://datatracker.ietf.org/doc/html/rfc7344"][tooltip="RFC7344: Automating DNSSEC Delegation Trust Maintenance"];
     RFC7583 [URL="https://datatracker.ietf.org/doc/html/rfc7583"][tooltip="RFC7583: DNSSEC Key Rollover Timing Considerations"][style="filled"];
     RFC7646 [URL="https://datatracker.ietf.org/doc/html/rfc7646"][tooltip="RFC7646: Definition and Use of DNSSEC Negative Trust Anchors"][style="filled"];
+    RFC7958 [URL="https://datatracker.ietf.org/doc/html/rfc7958"][tooltip="RFC7958: DNSSEC Trust Anchor Publication for the Root Zone"][style="filled"];
     RFC8027 [URL="https://datatracker.ietf.org/doc/html/rfc8027"][tooltip="RFC8027: DNSSEC Roadblock Avoidance"][style="filled"];
+    RFC8063 [URL="https://datatracker.ietf.org/doc/html/rfc8063"][tooltip="RFC8063: Key Relay Mapping for the Extensible Provisioning Protocol"];
     RFC8078 [URL="https://datatracker.ietf.org/doc/html/rfc8078"][tooltip="RFC8078: Managing DS Records from the Parent via CDS/CDNSKEY"];
     RFC8080 [URL="https://datatracker.ietf.org/doc/html/rfc8080"][tooltip="RFC8080: Edwards-Curve Digital Security Algorithm (EdDSA) for DNSSEC"];
     RFC8145 [URL="https://datatracker.ietf.org/doc/html/rfc8145"][tooltip="RFC8145: Signaling Trust Anchor Knowledge in DNS Security Extensions (DNSSEC)"];
@@ -77,6 +84,7 @@ digraph "DNS Security Mechanisms" {
     RFC8749 [URL="https://datatracker.ietf.org/doc/html/rfc8749"][tooltip="RFC8749: Moving DNSSEC Lookaside Validation (DLV) to Historic Status"];
     RFC8901 [URL="https://datatracker.ietf.org/doc/html/rfc8901"][tooltip="RFC8901: Multi-Signer DNSSEC Models"][style="filled"];
     RFC9077 [URL="https://datatracker.ietf.org/doc/html/rfc9077"][tooltip="RFC9077: NSEC and NSEC3: TTLs and Aggressive Use"];
+    RFC9102 [URL="https://datatracker.ietf.org/doc/html/rfc9102"][tooltip="RFC9102: TLS DNSSEC Chain Extension"];
     RFC9157 [URL="https://datatracker.ietf.org/doc/html/rfc9157"][tooltip="RFC9157: Revised IANA Considerations for DNSSEC"];
     RFC9276 [URL="https://datatracker.ietf.org/doc/html/rfc9276"][tooltip="RFC9276: Guidance for NSEC3 Parameter Settings"][style="filled"];
     label = "DNSSEC";
@@ -92,6 +100,7 @@ digraph "DNS Security Mechanisms" {
   subgraph cluster_doh {
     node [fillcolor="yellow",style="filled,rounded",shape="box"];
     RFC8484 [URL="https://datatracker.ietf.org/doc/html/rfc8484"][tooltip="RFC8484: DNS Queries over HTTPS (DoH)"];
+    RFC9230 [URL="https://datatracker.ietf.org/doc/html/rfc9230"][tooltip="RFC9230: Oblivious DNS over HTTPS"];
     label = "DNS over HTTPS (DoH)";
     color=blue;
   }
@@ -112,6 +121,8 @@ digraph "DNS Security Mechanisms" {
     RFC6394 [URL="https://datatracker.ietf.org/doc/html/rfc6394"][tooltip="RFC6394: Use Cases and Requirements for DNS-Based Authentication of Named Entities (DANE)"][style="filled"];
     RFC7218 [URL="https://datatracker.ietf.org/doc/html/rfc7218"][tooltip="RFC7218: Adding Acronyms to Simplify Conversations about DNS-Based Authentication of Named Entities (DANE)"];
     RFC7671 [URL="https://datatracker.ietf.org/doc/html/rfc7671"][tooltip="RFC7671: The DNS-Based Authentication of Named Entities (DANE) Protocol: Updates and Operational Guidance"];
+    RFC7672 [URL="https://datatracker.ietf.org/doc/html/rfc7672"][tooltip="RFC7672: SMTP Security via Opportunistic DNS-Based Authentication of Named Entities (DANE) Transport Layer Security (TLS)"];
+    RFC7673 [URL="https://datatracker.ietf.org/doc/html/rfc7673"][tooltip="RFC7673: Using DNS-Based Authentication of Named Entities (DANE) TLSA Records with SRV Records"];
     RFC6698 [URL="https://datatracker.ietf.org/doc/html/rfc6698"][tooltip="RFC6698: The DNS-Based Authentication of Named Entities (DANE) Transport Layer Security (TLS) Protocol: TLSA"];
     RFC7929 [URL="https://datatracker.ietf.org/doc/html/rfc7929"][tooltip="RFC7929: DNS-Based Authentication of Named Entities (DANE) Bindings for OpenPGP"];
     label = "DNS-based Authentication of Named Entities (DANE)";
@@ -124,6 +135,7 @@ digraph "DNS Security Mechanisms" {
     RFC6844 [URL="https://datatracker.ietf.org/doc/html/rfc6844"][tooltip="RFC6844: DNS Certification Authority Authorization (CAA) Resource Record"][fillcolor="#f0f0f0",color="#c0c0c0"];
     RFC7626 [URL="https://datatracker.ietf.org/doc/html/rfc7626"][tooltip="RFC7626: DNS Privacy Considerations"][fillcolor="#f0f0f0",color="#c0c0c0",style="filled"];
     RFC8162 [URL="https://datatracker.ietf.org/doc/html/rfc8162"][tooltip="RFC8162: Using Secure DNS to Associate Certificates with Domain Names for S/MIME"];
+    RFC8657 [URL="https://datatracker.ietf.org/doc/html/rfc8657"][tooltip="RFC8657: Certification Authority Authorization (CAA) Record Extensions for Account URI and Automatic Certificate Management Environment (ACME) Method Binding"];
     RFC8659 [URL="https://datatracker.ietf.org/doc/html/rfc8659"][tooltip="RFC8659: DNS Certification Authority Authorization (CAA) Resource Record"];
     RFC8932 [URL="https://datatracker.ietf.org/doc/html/rfc8932"][tooltip="RFC8932: Recommendations for DNS Privacy Service Operators"][style="filled"];
     RFC8945 [URL="https://datatracker.ietf.org/doc/html/rfc8945"][tooltip="RFC8945: Secret Key Transaction Authentication for DNS (TSIG)"];
@@ -135,6 +147,7 @@ digraph "DNS Security Mechanisms" {
   }
   RFC2535 -> RFC2065 [color="#c0c0c0",style=dashed];
   RFC2931 -> RFC2535;
+  RFC3007 -> RFC2137 [color="#c0c0c0",style=dashed];
   RFC3007 -> RFC2535;
   RFC3008 -> RFC2535;
   RFC3090 -> RFC2535;
@@ -152,6 +165,7 @@ digraph "DNS Security Mechanisms" {
   RFC3757 -> RFC2535;
   RFC3845 -> RFC3755;
   RFC3845 -> RFC2535;
+  RFC4033 -> RFC3225;
   RFC4033 -> RFC3226;
   RFC4033 -> RFC2535 [color="#c0c0c0",style=dashed];
   RFC4033 -> RFC3008 [color="#c0c0c0",style=dashed];
@@ -162,6 +176,7 @@ digraph "DNS Security Mechanisms" {
   RFC4033 -> RFC3755 [color="#c0c0c0",style=dashed];
   RFC4033 -> RFC3757 [color="#c0c0c0",style=dashed];
   RFC4033 -> RFC3845 [color="#c0c0c0",style=dashed];
+  RFC4034 -> RFC3225;
   RFC4034 -> RFC3226;
   RFC4034 -> RFC2535 [color="#c0c0c0",style=dashed];
   RFC4034 -> RFC3008 [color="#c0c0c0",style=dashed];
@@ -172,6 +187,7 @@ digraph "DNS Security Mechanisms" {
   RFC4034 -> RFC3755 [color="#c0c0c0",style=dashed];
   RFC4034 -> RFC3757 [color="#c0c0c0",style=dashed];
   RFC4034 -> RFC3845 [color="#c0c0c0",style=dashed];
+  RFC4035 -> RFC3225;
   RFC4035 -> RFC3226;
   RFC4035 -> RFC2535 [color="#c0c0c0",style=dashed];
   RFC4035 -> RFC3008 [color="#c0c0c0",style=dashed];
@@ -224,29 +240,29 @@ digraph "DNS Security Mechanisms" {
   RFC9157 -> RFC6014;
   RFC9157 -> RFC8624;
   RFC9276 -> RFC5155;
-  { rank = same; 1997; RFC2065; }
-  { rank = same; 1999; RFC2536; RFC2535; RFC2537; RFC2541; RFC2540; RFC2538; RFC2539; }
+  { rank = same; 1997; RFC2065; RFC2137; RFC2230; }
+  { rank = same; 1999; RFC2535; RFC2536; RFC2537; RFC2538; RFC2539; RFC2540; RFC2541; }
   { rank = same; 2000; RFC2930; RFC2931; RFC2845; RFC3008; RFC3007; }
-  { rank = same; 2001; RFC3090; RFC3110; RFC3226; }
+  { rank = same; 2001; RFC3090; RFC3110; RFC3130; RFC3225; RFC3226; }
   { rank = same; 2002; RFC3445; }
-  { rank = same; 2003; RFC3658; RFC3645; RFC3655; }
-  { rank = same; 2004; RFC3845; RFC3755; RFC3757; }
-  { rank = same; 2005; RFC4033; RFC4310; RFC4035; RFC4034; }
-  { rank = same; 2006; RFC4255; RFC4470; RFC4471; RFC4431; RFC4635; RFC4509; RFC4641; RFC4398; }
-  { rank = same; 2007; RFC4986; RFC4956; RFC5011; RFC5074; RFC4955; }
+  { rank = same; 2003; RFC3645; RFC3655; RFC3658; }
+  { rank = same; 2004; RFC3755; RFC3757; RFC3845; }
+  { rank = same; 2005; RFC4033; RFC4034; RFC4035; RFC4310; }
+  { rank = same; 2006; RFC4255; RFC4398; RFC4431; RFC4470; RFC4471; RFC4509; RFC4635; RFC4641; }
+  { rank = same; 2007; RFC4986; RFC4955; RFC4956; RFC5011; RFC5074; }
   { rank = same; 2008; RFC5155; }
   { rank = same; 2009; RFC5702; }
-  { rank = same; 2010; RFC6014; RFC5910; RFC5933; }
+  { rank = same; 2010; RFC5910; RFC5933; RFC6014; }
   { rank = same; 2011; RFC6394; }
-  { rank = same; 2012; RFC6605; RFC6725; RFC6698; RFC6781; }
-  { rank = same; 2013; RFC6841; RFC6840; RFC6944; RFC6975; RFC6844; }
-  { rank = same; 2014; RFC7218; RFC7129; RFC7344; }
-  { rank = same; 2015; RFC7646; RFC7671; RFC7583; RFC7626; }
-  { rank = same; 2016; RFC7929; RFC7858; RFC8027; }
-  { rank = same; 2017; RFC8080; RFC8094; RFC8078; RFC8145; RFC8162; RFC8198; }
-  { rank = same; 2018; RFC8509; RFC8310; RFC8484; }
-  { rank = same; 2019; RFC8659; RFC8624; }
-  { rank = same; 2020; RFC8932; RFC8749; RFC8945; RFC8901; }
-  { rank = same; 2021; RFC9077; RFC8976; RFC9157; RFC9103; RFC9076; }
-  { rank = same; 2022; RFC9276; RFC9250; }
+  { rank = same; 2012; RFC6594; RFC6605; RFC6698; RFC6725; RFC6781; }
+  { rank = same; 2013; RFC6840; RFC6841; RFC6844; RFC6944; RFC6975; }
+  { rank = same; 2014; RFC7129; RFC7218; RFC7344; }
+  { rank = same; 2015; RFC7583; RFC7626; RFC7646; RFC7671; RFC7672; RFC7673; }
+  { rank = same; 2016; RFC7858; RFC7929; RFC7958; RFC8027; }
+  { rank = same; 2017; RFC8063; RFC8078; RFC8080; RFC8094; RFC8145; RFC8162; RFC8198; }
+  { rank = same; 2018; RFC8310; RFC8484; RFC8509; }
+  { rank = same; 2019; RFC8624; RFC8657; RFC8659; }
+  { rank = same; 2020; RFC8749; RFC8901; RFC8932; RFC8945; }
+  { rank = same; 2021; RFC8976; RFC9076; RFC9077; RFC9102; RFC9103; RFC9157 }
+  { rank = same; 2022; RFC9230; RFC9250; RFC9276; }
 }
